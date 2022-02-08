@@ -8,6 +8,6 @@
     "playwright-chromium": "^1.18.1"
   },
   "scripts": {
-    "run": "node index.js"
+    "refresh": "node index.js"
   }
 }

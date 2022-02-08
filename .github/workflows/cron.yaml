@@ -16,5 +16,5 @@ jobs:
           yarn install
           npx playwright install
 
-      - name: Run
-        run: yarn run
+      - name: Refresh
+        run: yarn refresh
