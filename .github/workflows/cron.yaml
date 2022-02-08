@@ -1,8 +1,8 @@
 name: Periodic run
 on:
   schedule:
-    # Every 19 min
-    - cron: "*/19 * * * *"
+    # Every 30 min
+    - cron: "*/30 * * * *"
 jobs:
   cron:
     runs-on: ubuntu-latest
