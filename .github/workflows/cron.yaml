@@ -20,5 +20,12 @@ jobs:
           yarn install
           npx playwright install
 
+      - name: Set up env
+        run: |
+          touch .env
+          echo USERNAME=${{ secrets.USERNAME }} >> .env
+          echo PASSWORD=${{ secrets.PASSWORD }} >> .env
+          echo URL=${{ secrets.URL }} >> .env
+
       - name: Refresh
         run: yarn refresh

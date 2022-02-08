@@ -1,5 +1,9 @@
 const { chromium } = require("playwright-chromium");
 
+const dotenv = require("dotenv");
+
+dotenv.config();
+
 (async () => {
   const browser = await chromium.launch({ chromiumSandbox: false });
   const context = await browser.newContext();
