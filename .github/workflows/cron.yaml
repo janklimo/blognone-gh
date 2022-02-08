@@ -1,8 +1,9 @@
 name: Periodic run
 on:
-  schedule:
-    # Every 10 min
-    - cron: "*/10 * * * *"
+  push
+  # schedule:
+  #   # Every 10 min
+  #   - cron: "*/10 * * * *"
 jobs:
   cron:
     runs-on: ubuntu-latest
