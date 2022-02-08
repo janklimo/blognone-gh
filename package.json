@@ -1,0 +1,13 @@
+{
+  "name": "blognone-gh",
+  "version": "1.0.0",
+  "description": "Referesh",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "playwright-chromium": "^1.18.1"
+  },
+  "scripts": {
+    "run": "node index.js"
+  }
+}

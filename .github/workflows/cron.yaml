@@ -1,0 +1,20 @@
+name: Periodic run
+on:
+  schedule:
+    # Every 15 min
+    - cron: "*/15 * * * *"
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          npx playwright install-deps
+
+      - name: Setup
+        run: |
+          yarn install
+          npx playwright install
+
+      - name: Run
+        run: yarn run
