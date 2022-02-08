@@ -2,7 +2,7 @@ name: Periodic run
 on:
   schedule:
     # Every 15 min
-    - cron: "*/15 * * * *"
+    - cron: "*/6 * * * *"
 jobs:
   cron:
     runs-on: ubuntu-latest
