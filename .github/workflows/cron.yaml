@@ -1,19 +1,14 @@
 name: Periodic run
 on:
-  push
-  # schedule:
-  #   # Every 10 min
-  #   - cron: "*/10 * * * *"
+  schedule:
+    # Every 19 min
+    - cron: "*/19 * * * *"
 jobs:
   cron:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      # - name: Install dependencies
-      #   run: |
-      #     npx playwright install-deps
 
       - name: Setup
         run: |

@@ -9,16 +9,8 @@ dotenv.config();
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  page.on("request", async (req) => {
-    console.log(await req.headersArray());
-  });
-
-  // const browser = await puppeteer.launch({
-  //   args: [
-  //     "--window-size=1920,1080",
-  //     "--no-sandbox",
-  //     "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36",
-  //   ],
+  // page.on("request", async (req) => {
+  //   console.log(await req.headersArray());
   // });
   await page.goto("https://jobs.blognone.com/login");
   await page.type("#email", process.env.USERNAME);
