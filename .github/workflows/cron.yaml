@@ -19,7 +19,7 @@ jobs:
       - name: Setup
         run: |
           yarn install
-          npx playwright install
+          npx playwright install chromium
 
       - name: Set up env
         run: |
