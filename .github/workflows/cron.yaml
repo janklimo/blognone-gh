@@ -1,8 +1,8 @@
 name: Periodic run
 on:
   schedule:
-    # Every 15 min
-    - cron: "*/15 * * * *"
+    # Every 20 min. Need to fit within the 2,000 min/mo GH limit.
+    - cron: "*/20 * * * *"
 jobs:
   cron:
     runs-on: ubuntu-latest
