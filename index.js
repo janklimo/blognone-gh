@@ -22,13 +22,10 @@ dotenv.config();
   console.log("Refreshing Senior Rails Engineer post...");
 
   await page.goto(process.env.URL);
-  await page.waitForNavigation();
-  await page.evaluate("window.scrollTo(0, document.body.scrollHeight)");
-  await page.waitForTimeout(3000);
-  await page.evaluate(() => {
-    document.querySelector('input[value="Publish Job"]').click();
-  });
-  await page.waitForNavigation();
+  await Promise.all([
+    page.waitForNavigation(),
+    page.click("input[value='Publish Job']"),
+  ]);
 
   browser.close();
 
